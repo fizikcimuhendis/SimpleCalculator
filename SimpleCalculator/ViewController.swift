@@ -14,86 +14,61 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondText: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     
-    // Global Variables
+    // MARK: Global Variables
     var result = Double()
     let formatter = NumberFormatter()
+  
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
-    // Summation
+    // MARK: Summation
     @IBAction func sumTapped(_ sender: Any) {
         
-        if let firstNumber = Double(firstText.text!){
-            if let secondNumber = Double(secondText.text!){
+        guard let firstNumber = Double(firstText.text!) else {return}
+        guard let secondNumber = Double(secondText.text!) else {return}
                 
-                result = firstNumber + secondNumber
-                formatter.maximumFractionDigits = 4
-                formatter.minimumFractionDigits = 2
-                
-                let formattedResult = formatter.string(for: result)
-                               
-                resultLabel.text = formattedResult
-                
-                
-            }
-        }
+        result = firstNumber + secondNumber
+        formatter.maximumFractionDigits = 4
+        formatter.minimumFractionDigits = 2
+        let formattedResult = formatter.string(for: result)
+        resultLabel.text = formattedResult
     }
     
-    // Substraction
+    // MARK: Substraction
     @IBAction func minusTapped(_ sender: Any) {
         
-        if let firstNumber = Double(firstText.text!){
-            if let secondNumber = Double(secondText.text!){
+        guard let firstNumber = Double(firstText.text!) else {return}
+        guard let secondNumber = Double(secondText.text!) else {return}
                 
-                result = firstNumber - secondNumber
-                formatter.maximumFractionDigits = 4
-                formatter.minimumFractionDigits = 2
-                
-                let formattedResult = formatter.string(for: result)
-                               
-                resultLabel.text = formattedResult
-                
-            }
-        }
+        result = firstNumber - secondNumber
+        formatter.maximumFractionDigits = 4
+        formatter.minimumFractionDigits = 2
+        let formattedResult = formatter.string(for: result)
+        resultLabel.text = formattedResult
     }
     
-    // Multiplication
+    // MARK: Multiplication
     @IBAction func multiplyTapped(_ sender: Any) {
         
-        if let firstNumber = Double(firstText.text!){
-            if let secondNumber = Double(secondText.text!){
+        guard let firstNumber = Double(firstText.text!) else {return}
+        guard let secondNumber = Double(secondText.text!) else {return}
                 
-                result = firstNumber * secondNumber
-                formatter.maximumFractionDigits = 4
-                formatter.minimumFractionDigits = 2
-                
-                let formattedResult = formatter.string(for: result)
-                
-                resultLabel.text = formattedResult
-                
-            }
-        }
+        result = firstNumber * secondNumber
+        formatter.maximumFractionDigits = 4
+        formatter.minimumFractionDigits = 2
+        let formattedResult = formatter.string(for: result)
+        resultLabel.text = formattedResult
     }
     
-    // Division
+    // MARK: Division
     @IBAction func divideTapped(_ sender: Any) {
         
-        if let firstNumber = Double(firstText.text!){
-            if let secondNumber = Double(secondText.text!){
+        guard let firstNumber = Double(firstText.text!) else {return}
+        guard let secondNumber = Double(secondText.text!) else {return}
                 
-                result = firstNumber / secondNumber
-                formatter.maximumFractionDigits = 4
-                formatter.minimumFractionDigits = 2
-                
-                let formattedResult = formatter.string(for: result)
-                
-                resultLabel.text = formattedResult
-                
-            }
-        }
+        result = firstNumber / secondNumber
+        formatter.maximumFractionDigits = 4
+        formatter.minimumFractionDigits = 2
+        let formattedResult = formatter.string(for: result)
+        resultLabel.text = formattedResult
     }
 
 }
