@@ -1,95 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculation Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculationController" customModule="SimpleCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-Ty-8mo">
-                                <rect key="frame" x="132" y="312" width="111" height="25.5"/>
+                                <rect key="frame" x="16" y="312" width="343" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIMPLE CALCULATOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7iu-sL-7Vw">
-                                <rect key="frame" x="117" y="52" width="141" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIMPLE CALCULATOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iu-sL-7Vw">
+                                <rect key="frame" x="16" y="52" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYa-E6-Z9O">
-                                <rect key="frame" x="75" y="107" width="225" height="34"/>
+                                <rect key="frame" x="32" y="107" width="311" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05F-ni-OKC">
-                                <rect key="frame" x="75" y="169" width="225" height="34"/>
+                                <rect key="frame" x="32" y="169" width="311" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="XYU-Gr-YWI">
-                                <rect key="frame" x="83.5" y="246" width="208" height="22"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="XYU-Gr-YWI">
+                                <rect key="frame" x="32" y="246" width="311" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWP-YZ-QFe">
-                                        <rect key="frame" x="0.0" y="0.0" width="18" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="22"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <state key="normal" image="plus" catalog="system"/>
                                         <connections>
-                                            <action selector="sumTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iRr-jC-qUY"/>
+                                            <action selector="plusDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iRr-jC-qUY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prJ-om-rtf">
-                                        <rect key="frame" x="63.5" y="0.0" width="18" height="22"/>
+                                        <rect key="frame" x="82" y="0.0" width="65.5" height="22"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <state key="normal" image="minus" catalog="system"/>
                                         <connections>
-                                            <action selector="minusTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpD-TI-pvK"/>
+                                            <action selector="minusDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpD-TI-pvK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGl-gd-Cxs">
-                                        <rect key="frame" x="128" y="0.0" width="15.5" height="22"/>
+                                        <rect key="frame" x="163.5" y="0.0" width="66" height="22"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <state key="normal" image="multiply" catalog="system"/>
                                         <connections>
-                                            <action selector="multiplyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x1K-2i-CVf"/>
+                                            <action selector="crossDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x1K-2i-CVf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdZ-nX-zaZ">
-                                        <rect key="frame" x="190" y="0.0" width="18" height="22"/>
+                                        <rect key="frame" x="245.5" y="0.0" width="65.5" height="22"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <state key="normal" image="divide" catalog="system"/>
                                         <connections>
-                                            <action selector="divideTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ll-0d-Dfg"/>
+                                            <action selector="divisionDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ll-0d-Dfg"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7iu-sL-7Vw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="2Pd-x4-b5D"/>
+                            <constraint firstItem="7iu-sL-7Vw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2Pd-x4-b5D"/>
                             <constraint firstItem="XYU-Gr-YWI" firstAttribute="top" secondItem="05F-ni-OKC" secondAttribute="bottom" constant="43" id="2a7-L6-Bj7"/>
-                            <constraint firstItem="XYU-Gr-YWI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83.5" id="9GV-A8-xZ5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7iu-sL-7Vw" secondAttribute="trailing" constant="117" id="Cfo-hV-zYi"/>
-                            <constraint firstItem="b2Z-Ty-8mo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="CuF-Zs-he1"/>
-                            <constraint firstItem="05F-ni-OKC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="KcZ-IX-t3K"/>
+                            <constraint firstItem="XYU-Gr-YWI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="9GV-A8-xZ5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7iu-sL-7Vw" secondAttribute="trailing" constant="16" id="Cfo-hV-zYi"/>
+                            <constraint firstItem="b2Z-Ty-8mo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CuF-Zs-he1"/>
+                            <constraint firstItem="05F-ni-OKC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="KcZ-IX-t3K"/>
                             <constraint firstItem="b2Z-Ty-8mo" firstAttribute="top" secondItem="XYU-Gr-YWI" secondAttribute="bottom" constant="44" id="Qyp-yN-Pqa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XYU-Gr-YWI" secondAttribute="trailing" constant="83.5" id="Ukf-0J-ANS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b2Z-Ty-8mo" secondAttribute="trailing" constant="132" id="Y7K-7O-gKC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XYU-Gr-YWI" secondAttribute="trailing" constant="32" id="Ukf-0J-ANS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b2Z-Ty-8mo" secondAttribute="trailing" constant="16" id="Y7K-7O-gKC"/>
                             <constraint firstItem="05F-ni-OKC" firstAttribute="top" secondItem="bYa-E6-Z9O" secondAttribute="bottom" constant="28" id="ae1-Rm-MWz"/>
                             <constraint firstItem="bYa-E6-Z9O" firstAttribute="top" secondItem="7iu-sL-7Vw" secondAttribute="bottom" constant="34.5" id="efQ-lE-gyO"/>
-                            <constraint firstItem="bYa-E6-Z9O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="gh4-gk-x4T"/>
+                            <constraint firstItem="bYa-E6-Z9O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="gh4-gk-x4T"/>
                             <constraint firstItem="7iu-sL-7Vw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="qqg-4s-eo2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="05F-ni-OKC" secondAttribute="trailing" constant="75" id="wPK-b9-2UQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bYa-E6-Z9O" secondAttribute="trailing" constant="75" id="wnZ-Br-LnP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="05F-ni-OKC" secondAttribute="trailing" constant="32" id="wPK-b9-2UQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bYa-E6-Z9O" secondAttribute="trailing" constant="32" id="wnZ-Br-LnP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="firstText" destination="bYa-E6-Z9O" id="7SG-G2-P3m"/>
@@ -107,5 +113,17 @@
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
