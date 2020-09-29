@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-Ty-8mo">
-                                <rect key="frame" x="16" y="334.5" width="343" height="25.5"/>
+                                <rect key="frame" x="16" y="404" width="343" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,9 +76,53 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" id="6fg-He-Hw9">
+                                <rect key="frame" x="32" y="323" width="311" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anf-bd-V3D">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="33"/>
+                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="percent" catalog="system"/>
+                                        <connections>
+                                            <action selector="percentDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SpB-V0-ILg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0N-09-ziC">
+                                        <rect key="frame" x="82" y="0.0" width="65.5" height="33"/>
+                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="a^b">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="powerDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QSj-Aq-kiE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5F-K1-HLv">
+                                        <rect key="frame" x="163.5" y="0.0" width="66" height="33"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <state key="normal" image="x.squareroot" catalog="system">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rootDidtap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nnT-CZ-v0K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9M7-1P-ou3">
+                                        <rect key="frame" x="245.5" y="0.0" width="65.5" height="33"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="log"/>
+                                        <connections>
+                                            <action selector="logDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aus-Tp-kC0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="7iu-sL-7Vw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2Pd-x4-b5D"/>
                             <constraint firstItem="XYU-Gr-YWI" firstAttribute="top" secondItem="05F-ni-OKC" secondAttribute="bottom" constant="48" id="2a7-L6-Bj7"/>
@@ -86,7 +130,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7iu-sL-7Vw" secondAttribute="trailing" constant="16" id="Cfo-hV-zYi"/>
                             <constraint firstItem="b2Z-Ty-8mo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CuF-Zs-he1"/>
                             <constraint firstItem="05F-ni-OKC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="KcZ-IX-t3K"/>
-                            <constraint firstItem="b2Z-Ty-8mo" firstAttribute="top" secondItem="XYU-Gr-YWI" secondAttribute="bottom" constant="48" id="Qyp-yN-Pqa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XYU-Gr-YWI" secondAttribute="trailing" constant="32" id="Ukf-0J-ANS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b2Z-Ty-8mo" secondAttribute="trailing" constant="16" id="Y7K-7O-gKC"/>
                             <constraint firstItem="05F-ni-OKC" firstAttribute="top" secondItem="bYa-E6-Z9O" secondAttribute="bottom" constant="32" id="ae1-Rm-MWz"/>
@@ -95,6 +138,7 @@
                             <constraint firstItem="7iu-sL-7Vw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="qqg-4s-eo2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="05F-ni-OKC" secondAttribute="trailing" constant="32" id="wPK-b9-2UQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bYa-E6-Z9O" secondAttribute="trailing" constant="32" id="wnZ-Br-LnP"/>
+                            <constraint firstItem="b2Z-Ty-8mo" firstAttribute="top" secondItem="6fg-He-Hw9" secondAttribute="bottom" constant="48" id="zKk-fR-5dG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -105,14 +149,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65.217391304347828" y="112.5"/>
+            <point key="canvasLocation" x="-66.400000000000006" y="111.99400299850076"/>
         </scene>
     </scenes>
     <resources>
         <image name="divide" catalog="system" width="128" height="103"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
+        <image name="percent" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="x.squareroot" catalog="system" width="128" height="98"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

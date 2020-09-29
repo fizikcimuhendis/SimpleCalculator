@@ -28,7 +28,7 @@ class CalculationController: UIViewController {
   
     // MARK: Actions
     
-    @IBAction func plusDidTap(_ sender: Any) {
+    @IBAction func plusDidTap(_ sender: UIButton) {
         guard let firstNumber = Double(firstText.text ?? "0"), let secondNumber = Double(secondText.text ?? "0") else { return }
                 
         result = firstNumber + secondNumber
@@ -36,7 +36,7 @@ class CalculationController: UIViewController {
         resultLabel.text = "Result: \(formattedResult!)"
     }
     
-    @IBAction func minusDidTap(_ sender: Any) {
+    @IBAction func minusDidTap(_ sender: UIButton) {
         guard let firstNumber = Double(firstText.text ?? "0"), let secondNumber = Double(secondText.text ?? "0") else { return }
                 
         result = firstNumber - secondNumber
@@ -44,7 +44,7 @@ class CalculationController: UIViewController {
         resultLabel.text = "Result: \(formattedResult!)"
     }
     
-    @IBAction func crossDidTap(_ sender: Any) {
+    @IBAction func crossDidTap(_ sender: UIButton) {
         guard let firstNumber = Double(firstText.text ?? "0"), let secondNumber = Double(secondText.text ?? "0") else { return }
                 
         result = firstNumber * secondNumber
@@ -52,12 +52,45 @@ class CalculationController: UIViewController {
         resultLabel.text = "Result: \(formattedResult!)"
     }
     
-    @IBAction func divisionDidTap(_ sender: Any) {
+    @IBAction func divisionDidTap(_ sender: UIButton) {
         guard let firstNumber = Double(firstText.text ?? "0"), let secondNumber = Double(secondText.text ?? "0") else { return }
                 
         result = firstNumber / secondNumber
         let formattedResult = formatter.string(for: result)
         resultLabel.text = "Result: \(formattedResult!)"
     }
+    
+    @IBAction func percentDidTap(_ sender: UIButton) {
+        guard let firstNumber = Double(firstText.text ?? "0"), let secondNumber = Double(secondText.text ?? "0") else { return }
+        
+        result = (firstNumber * secondNumber) / 100
+        let formattedResult = formatter.string(for: result)
+        resultLabel.text = "Result: \(formattedResult!)"
+    }
+    
+    @IBAction func powerDidTap(_ sender: UIButton) {
+        guard let firstNumber = Double(firstText.text ?? "0"), let secondNumber = Double(secondText.text ?? "0") else { return }
+        
+        result = pow(firstNumber, secondNumber)
+        let formattedResult = formatter.string(for: result)
+        resultLabel.text = "Result: \(formattedResult!)"
+    }
+    
+    @IBAction func rootDidtap(_ sender: UIButton) {
+        guard let firstNumber = Double(firstText.text ?? "0"), let secondNumber = Double(secondText.text ?? "0") else { return }
+        
+        result = pow(firstNumber, 1/secondNumber)
+        let formattedResult = formatter.string(for: result)
+        resultLabel.text = "Result: \(formattedResult!)"
+    }
+    
+    @IBAction func logDidTap(_ sender: UIButton) {
+        guard let firstNumber = Double(firstText.text ?? "0"), let secondNumber = Double(secondText.text ?? "0") else { return }
+        
+        result = log(secondNumber) / log(firstNumber)
+        let formattedResult = formatter.string(for: result)
+        resultLabel.text = "Result: \(formattedResult!)"
+    }
+    
 
 }

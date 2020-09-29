@@ -35,6 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64099F4425239F2400CFBB64 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		64099F4E2523B51500CFBB64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64DBA05623759D7F0041471D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		64099F4F2523B58200CFBB64 /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				64DBA04F23759D7B0041471D /* AppDelegate.swift */,
+				64DBA05B23759D7F0041471D /* Info.plist */,
+				64DBA05823759D7F0041471D /* LaunchScreen.storyboard */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
 		64CCD581251A75A8008BB300 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -49,17 +74,6 @@
 				64DBA05323759D7B0041471D /* Main.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		64CCD584251A762C008BB300 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				64DBA04F23759D7B0041471D /* AppDelegate.swift */,
-				64DBA05623759D7F0041471D /* Assets.xcassets */,
-				64DBA05B23759D7F0041471D /* Info.plist */,
-				64DBA05823759D7F0041471D /* LaunchScreen.storyboard */,
-			);
-			path = Application;
 			sourceTree = "<group>";
 		};
 		64DBA04323759D7A0041471D = {
@@ -81,7 +95,9 @@
 		64DBA04E23759D7B0041471D /* SimpleCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				64CCD584251A762C008BB300 /* Application */,
+				64099F4F2523B58200CFBB64 /* AppConfig */,
+				64099F4E2523B51500CFBB64 /* Resources */,
+				64099F4425239F2400CFBB64 /* Services */,
 				64CCD583251A75E4008BB300 /* Storyboards */,
 				64CCD581251A75A8008BB300 /* ViewControllers */,
 			);
@@ -310,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3BT8X224F;
-				INFOPLIST_FILE = SimpleCalculator/Application/Info.plist;
+				INFOPLIST_FILE = SimpleCalculator/AppConfig/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -330,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3BT8X224F;
-				INFOPLIST_FILE = SimpleCalculator/Application/Info.plist;
+				INFOPLIST_FILE = SimpleCalculator/AppConfig/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
