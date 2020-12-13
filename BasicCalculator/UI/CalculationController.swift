@@ -94,23 +94,18 @@ class CalculationController: UIViewController {
         switch operation {
         case "+":
             result = intermediateResult + lastNumber
-            let formattedResult = formatter.string(for: result)
-            enterNumberField.text = "\(formattedResult!)"
         case "-":
             result = intermediateResult - lastNumber
-            let formattedResult = formatter.string(for: result)
-            enterNumberField.text = "\(formattedResult!)"
         case "*":
             result = intermediateResult * lastNumber
-            let formattedResult = formatter.string(for: result)
-            enterNumberField.text = "\(formattedResult!)"
         case "/":
             result = intermediateResult / lastNumber
-            let formattedResult = formatter.string(for: result)
-            enterNumberField.text = "\(formattedResult!)"
         default:
             print("Error")
         }
+        
+        let formattedResult = formatter.string(for: result)
+        enterNumberField.text = "\(formattedResult!)"
         
     }
     
