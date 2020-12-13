@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		64DBA04C23759D7B0041471D /* SimpleCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64DBA04C23759D7B0041471D /* BasicCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DBA04F23759D7B0041471D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64DBA05123759D7B0041471D /* CalculationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationController.swift; sourceTree = "<group>"; };
 		64DBA05423759D7B0041471D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,13 +35,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		64099F4425239F2400CFBB64 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		64099F4E2523B51500CFBB64 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -50,36 +43,28 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		64099F4F2523B58200CFBB64 /* AppConfig */ = {
+		64099F4F2523B58200CFBB64 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
 				64DBA04F23759D7B0041471D /* AppDelegate.swift */,
 				64DBA05B23759D7F0041471D /* Info.plist */,
 				64DBA05823759D7F0041471D /* LaunchScreen.storyboard */,
 			);
-			path = AppConfig;
+			path = Supports;
 			sourceTree = "<group>";
 		};
-		64CCD581251A75A8008BB300 /* ViewControllers */ = {
+		64CCD581251A75A8008BB300 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				64DBA05123759D7B0041471D /* CalculationController.swift */,
 			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		64CCD583251A75E4008BB300 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				64DBA05323759D7B0041471D /* Main.storyboard */,
-			);
-			path = Storyboards;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		64DBA04323759D7A0041471D = {
 			isa = PBXGroup;
 			children = (
-				64DBA04E23759D7B0041471D /* SimpleCalculator */,
+				64DBA04E23759D7B0041471D /* BasicCalculator */,
 				64DBA04D23759D7B0041471D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,29 +72,28 @@
 		64DBA04D23759D7B0041471D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				64DBA04C23759D7B0041471D /* SimpleCalculator.app */,
+				64DBA04C23759D7B0041471D /* BasicCalculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		64DBA04E23759D7B0041471D /* SimpleCalculator */ = {
+		64DBA04E23759D7B0041471D /* BasicCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				64099F4F2523B58200CFBB64 /* AppConfig */,
+				64DBA05323759D7B0041471D /* Main.storyboard */,
 				64099F4E2523B51500CFBB64 /* Resources */,
-				64099F4425239F2400CFBB64 /* Services */,
-				64CCD583251A75E4008BB300 /* Storyboards */,
-				64CCD581251A75A8008BB300 /* ViewControllers */,
+				64099F4F2523B58200CFBB64 /* Supports */,
+				64CCD581251A75A8008BB300 /* UI */,
 			);
-			path = SimpleCalculator;
+			path = BasicCalculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		64DBA04B23759D7B0041471D /* SimpleCalculator */ = {
+		64DBA04B23759D7B0041471D /* BasicCalculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64DBA05E23759D7F0041471D /* Build configuration list for PBXNativeTarget "SimpleCalculator" */;
+			buildConfigurationList = 64DBA05E23759D7F0041471D /* Build configuration list for PBXNativeTarget "BasicCalculator" */;
 			buildPhases = (
 				64DBA04823759D7B0041471D /* Sources */,
 				64DBA04923759D7B0041471D /* Frameworks */,
@@ -119,9 +103,9 @@
 			);
 			dependencies = (
 			);
-			name = SimpleCalculator;
+			name = BasicCalculator;
 			productName = SimpleCalculator;
-			productReference = 64DBA04C23759D7B0041471D /* SimpleCalculator.app */;
+			productReference = 64DBA04C23759D7B0041471D /* BasicCalculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -139,7 +123,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 64DBA04723759D7B0041471D /* Build configuration list for PBXProject "SimpleCalculator" */;
+			buildConfigurationList = 64DBA04723759D7B0041471D /* Build configuration list for PBXProject "BasicCalculator" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -152,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				64DBA04B23759D7B0041471D /* SimpleCalculator */,
+				64DBA04B23759D7B0041471D /* BasicCalculator */,
 			);
 		};
 /* End PBXProject section */
@@ -326,14 +310,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3BT8X224F;
-				INFOPLIST_FILE = SimpleCalculator/AppConfig/Info.plist;
+				INFOPLIST_FILE = BasicCalculator/Supports/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emirhardal.SimpleCalculator;
+				MARKETING_VERSION = 1.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emirhardal.BasicCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -346,14 +330,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3BT8X224F;
-				INFOPLIST_FILE = SimpleCalculator/AppConfig/Info.plist;
+				INFOPLIST_FILE = BasicCalculator/Supports/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.emirhardal.SimpleCalculator;
+				MARKETING_VERSION = 1.3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emirhardal.BasicCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -363,7 +347,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		64DBA04723759D7B0041471D /* Build configuration list for PBXProject "SimpleCalculator" */ = {
+		64DBA04723759D7B0041471D /* Build configuration list for PBXProject "BasicCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64DBA05C23759D7F0041471D /* Debug */,
@@ -372,7 +356,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64DBA05E23759D7F0041471D /* Build configuration list for PBXNativeTarget "SimpleCalculator" */ = {
+		64DBA05E23759D7F0041471D /* Build configuration list for PBXNativeTarget "BasicCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				64DBA05F23759D7F0041471D /* Debug */,
