@@ -8,6 +8,50 @@
 
 import UIKit
 
+//MARK: - Extension for Rounding
+extension Double {
+    func round(toDecimal places: Int) -> Double {
+        let precisionNumber = pow(10, Double(places))
+        var n = self
+        n = n * precisionNumber
+        n.round()
+        n = n / precisionNumber
+        return n
+    }
+}
+
+//MARK: - Extension for UIButton Animation
+
+extension UIButton {
+    
+    func startAnimatingPressActions() {
+        addTarget(self, action: #selector(animateDown), for: [.touchDown, .touchDragEnter])
+        addTarget(self, action: #selector(animateUp), for: [.touchDragExit, .touchCancel, .touchUpInside, .touchUpOutside])
+    }
+    
+    @objc private func animateDown(sender: UIButton) {
+        animate(sender, transform: CGAffineTransform.identity.scaledBy(x: 0.95, y: 0.95))
+    }
+    
+    @objc private func animateUp(sender: UIButton) {
+        animate(sender, transform: .identity)
+    }
+    
+    private func animate(_ button: UIButton, transform: CGAffineTransform) {
+        UIView.animate(withDuration: 0.4,
+                       delay: 0,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 3,
+                       options: [.curveEaseInOut],
+                       animations: {
+                        button.transform = transform
+            }, completion: nil)
+    }
+    
+}
+
+//MARK: - UIViewController
+
 class CalculationController: UIViewController {
     
     // MARK: Outlets
@@ -20,12 +64,13 @@ class CalculationController: UIViewController {
     private var operation = ""
     private var intermediateResult : Double = 0.0
     private var result : Double = 0.0
-    private var formatter: NumberFormatter {
-        let newFormatter = NumberFormatter()
-        newFormatter.maximumFractionDigits = 4
-        newFormatter.minimumFractionDigits = 2
-        return newFormatter
-    } // Closure Stored property'e dönüştürünce hata veriyor, neden?
+    
+//    private var formatter: NumberFormatter {
+//        let newFormatter = NumberFormatter()
+//        newFormatter.maximumFractionDigits = 4
+//        newFormatter.minimumFractionDigits = 2
+//        return newFormatter
+//    } // Closure Stored property'e dönüştürünce hata veriyor, neden?
     
   
     // MARK: Actions
@@ -83,11 +128,6 @@ class CalculationController: UIViewController {
     }
     
     @IBAction func equalDidTap(_ sender: UIButton) {
-//        if enterNumberField.text == nil{
-//            result = intermediateResult
-//            let formattedResult = formatter.string(for: result)
-//            enterNumberField.text = "\(formattedResult!)"
-//        } // BURASI OLMADAN DA ÇALIŞIYOR.
         
         lastNumber = Double(enterNumberField.text!) ?? 0.0
         
@@ -104,12 +144,11 @@ class CalculationController: UIViewController {
             print("Error")
         }
         
-        let formattedResult = formatter.string(for: result)
-        enterNumberField.text = "\(formattedResult!)"
+        // let formattedResult = formatter.string(for: result)
+        enterNumberField.text = "\(result.round(toDecimal: 3))"
+        
+        enterNumberField.endEditing(true)
         
     }
-    
-    
-    
-    
 }
+

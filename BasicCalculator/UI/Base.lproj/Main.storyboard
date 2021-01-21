@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,6 +38,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UR1-no-7Uc" userLabel="AC">
                                         <rect key="frame" x="0.0" y="0.0" width="66" height="32"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="AC">
                                             <color key="titleColor" systemColor="systemBlueColor"/>
                                         </state>
@@ -47,7 +49,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9c-4W-qhZ" userLabel="-+">
                                         <rect key="frame" x="82" y="0.0" width="65.5" height="32"/>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
-                                        <state key="normal" image="minus.slash.plus" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="minus.slash.plus" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="minpluDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YX1-JU-FHu"/>
                                         </connections>
@@ -55,7 +60,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA6-Pu-dU7">
                                         <rect key="frame" x="163.5" y="0.0" width="66" height="32"/>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title=","/>
                                         <connections>
                                             <action selector="decimalDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Knm-VI-odF"/>
@@ -64,7 +69,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRV-qj-bg9" userLabel="=">
                                         <rect key="frame" x="245.5" y="0.0" width="65.5" height="32"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                        <state key="normal" image="equal" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="equal" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="equalDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vdi-1Z-kVB"/>
                                         </connections>
@@ -80,7 +88,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWP-YZ-QFe" userLabel="+">
                                         <rect key="frame" x="0.0" y="0.0" width="66" height="32"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <state key="normal" image="plus" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="plusDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iRr-jC-qUY"/>
                                         </connections>
@@ -88,7 +99,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prJ-om-rtf" userLabel="-">
                                         <rect key="frame" x="82" y="0.0" width="65.5" height="32"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                        <state key="normal" image="minus" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="minus" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="minusDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1D-c8-zYt"/>
                                         </connections>
@@ -96,7 +110,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGl-gd-Cxs" userLabel="*">
                                         <rect key="frame" x="163.5" y="0.0" width="66" height="32"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <state key="normal" image="multiply" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="multiply" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="crossDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LIB-Md-2hG"/>
                                         </connections>
@@ -104,7 +121,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdZ-nX-zaZ" userLabel="/">
                                         <rect key="frame" x="245.5" y="0.0" width="65.5" height="32"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                        <state key="normal" image="divide" catalog="system"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="divide" catalog="system" symbolScale="large"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="slashDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CMs-H7-rKf"/>
                                         </connections>

@@ -53,10 +53,18 @@
 			path = Supports;
 			sourceTree = "<group>";
 		};
-		64CCD581251A75A8008BB300 /* UI */ = {
+		641B758C258E93F800E6E4CF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				64DBA05123759D7B0041471D /* CalculationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		64CCD581251A75A8008BB300 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				64DBA05323759D7B0041471D /* Main.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -80,9 +88,9 @@
 		64DBA04E23759D7B0041471D /* BasicCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				64DBA05323759D7B0041471D /* Main.storyboard */,
 				64099F4E2523B51500CFBB64 /* Resources */,
 				64099F4F2523B58200CFBB64 /* Supports */,
+				641B758C258E93F800E6E4CF /* Controller */,
 				64CCD581251A75A8008BB300 /* UI */,
 			);
 			path = BasicCalculator;
